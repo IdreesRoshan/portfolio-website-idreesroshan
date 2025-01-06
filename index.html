@@ -9,13 +9,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css"> <!--links css-->
+    <!--links css-->
+    <link rel="stylesheet" href="style.css"> 
 
-    <script defer src="script.js"></script> <!--attaches js script-->
+    <!--font awesome kit-->
+    <script src="https://kit.fontawesome.com/a25c9a74ba.js" crossorigin="anonymous"></script>
+
+    <!--attaches js script-->
+    <script defer src="script.js"></script> 
 
     <title>Idrees Roshan</title>
 </head>
 <body>
+
+    <!--NAVBAR-->
     <!--Header class, we need a div for the content-->
     <header class="header">
         <div class="header__content">
@@ -50,6 +57,52 @@
             </div>
         </div>
     </header>
+    <!--NAVBAR END-->
     
+    <!--PROFILE SECTION-->
+    <section id="profile">
+        <div class="section__pic-container">
+            <img src="./images/bw_profile-ccropped.png" alt="Idrees Roshan profile picture">
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1"> Hello, I'm</p>
+            <h1 class="title">Idrees Roshan</h1>
+            <p class="section__text__p2">Full Stack Software Engineer</p>
+            
+            <!--Button for CV and contacts-->
+            <div class="btn-container">
+                <button class="btn btn-color-2" 
+                onclick="window.open('./images/idrees Roshan - resume.pdf')">
+                Download CV
+                </button>
+
+                <button class="btn btn-color-1" 
+                onclick="location.href='./#contact'">
+                Contact Info
+                </button>
+            </div>
+            
+            <!--Font awsome icons with links-->
+            <div id="socials-container">
+                <a href="https://www.linkedin.com/in/idrees-roshan-930a4128b">
+                    <i class="fa-brands fa-linkedin fa-2x"></i>
+                </a>
+
+                <a href="https://github.com/IdreesRoshan">
+                    <i class="fa-brands fa-github fa-2x"></i>
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+    <!--PROFILE SECTION END-->
+
+    <!--ABOUT SECTION-->
+    <section id="about">
+        
+    </section>
+    <!--ABOUT SECTION END-->
+
 </body>
 </html>

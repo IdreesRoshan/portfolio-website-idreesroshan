@@ -6,10 +6,16 @@
     box-sizing: border-box; /*Helps to set the height or width of an element*/
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* ANCHOR TAGS */
-a {
+a,
+.btn {
     text-decoration: none;
     color: inherit;
+    transition: all 0.3s ease;
 }
 
 /* LISTS */
@@ -19,10 +25,10 @@ ul {
 
 /* BASE STYLES */
 body {
-    background-color: #000;
+    background-color: #fff;
     font-family: 'Inter', sans-serif; /*Inter font, back up sand-serif*/
     min-height: 5000px; /*Just to add some scrolling*/
-    padding-top: 60px;
+    padding-top: 70px;
     position: relative;
     background-image: url("/images/bg.jpg");
     background-repeat: no-repeat;
@@ -38,6 +44,7 @@ body {
     width: 100%;
     top: 0;
     transition: all 0.3s ease-in;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.8);
 }
 
 
@@ -93,7 +100,7 @@ body {
     width: 100%;
     background-color: #cdb1b8;
     position: absolute; /*the lines will not take up any space but we must adjust the positioning*/
-    bottom: -6px;
+    bottom: -10px;
     border-radius: 50px;
     transform: scaleX(0);
     transition: transform 0.25s linear;
@@ -116,6 +123,98 @@ body {
     opacity: 0.8;
     transition: all 0.3s ease-in-out;
 }
+
+/* SECTION */
+
+section {
+    padding-top: 4vh;
+    height: 96vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+.section-container {
+    display: flex;
+}
+
+/* PROFILE SECTION */
+#profile {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    height: 80vh;
+}
+
+.section__pic-container{
+    display: flex;
+    height: 300px;
+    width: 300px;
+    margin: auto 0;
+}
+
+.section__text {
+    align-self: center;
+    text-align: center;
+    color: #fff;
+}
+
+.section__text p {
+    font-weight: 600;
+}
+
+.section__text__p1 {
+    text-align: center;
+}
+
+.section__text__p2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 6rem;
+    text-align: center;
+}
+
+#socials-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+/* BUTTON */
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn {
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: 0.6rem;
+    width: 8rem;
+    border-radius: 2rem;
+}
+
+.btn-color-1,
+.btn-color-2 {
+    border: rgb(255, 255, 255) 0.1rem solid;
+    color: black;
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+    cursor:pointer;
+    background : rgb(27, 31, 36);
+    border: rgb(27, 31, 36) 0.1rem solid;;
+    color: white;
+    transform: scale(1.09);
+}
+
 
 /* FOR JS */
 
@@ -146,7 +245,7 @@ body {
         position: fixed;
         top: 60px;
         left: 1000px;
-        background-color: rgba(19, 22, 26, 0.9);
+        background-color: rgba(19, 22, 26, 0.97);
         width: 100%;
         padding: 10px 0 25px;
         transition: all 0.5s ease-in-out;
