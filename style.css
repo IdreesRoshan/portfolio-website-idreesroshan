@@ -1,0 +1,164 @@
+/* RESET */
+/*Always start off with a reset*/
+* {
+    margin: 0;  /*remove all margins*/
+    padding: 0; /*remove all padding*/
+    box-sizing: border-box; /*Helps to set the height or width of an element*/
+}
+
+/* ANCHOR TAGS */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* LISTS */
+ul {
+    list-style: none;
+}
+
+/* BASE STYLES */
+body {
+    background-color: #000;
+    font-family: 'Inter', sans-serif; /*Inter font, back up sand-serif*/
+    min-height: 5000px; /*Just to add some scrolling*/
+    padding-top: 60px;
+    position: relative;
+    background-image: url("/images/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* NORMAL STYLES */
+.header {
+    background-color: rgba(19, 22, 26, 1);
+    position: fixed; /*fixed so that it stays when we scroll, must pad the top of body*/
+    width: 100%;
+    top: 0;
+    transition: all 0.3s ease-in;
+}
+
+
+
+.header__content {
+    display: flex;  /*using flexbox for placement*/
+    align-items: center;
+    justify-content: space-between; /*created the biggest space between logo and nav*/
+    min-height: 60px; /*creates space between the header and the elements vertically*/
+    max-width: 1500px;/*fix width of all header content*/
+    padding: 0 30px; /*add padding when size changes, doesn't sit against the edge*/
+    margin: 0 auto; /*keeps all content centered and adjusts for size*/
+}
+
+.logo__text {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+}
+
+.nav {
+    transition: all 0.3s ease-in;
+}
+
+.nav__list {
+    display: flex;
+    column-gap: 40px;
+}
+
+.nav__items {
+
+}
+
+.nav__links {
+
+}
+
+.nav__link {
+    color: rgba(255, 255, 255, 0.7);    /*R, G, B, Opacity*/
+    transition: all 0.3s;   /*All properties that change should happen in 0.3s*/
+    position: relative;
+}
+
+.nav__link:hover,
+.nav__link:focus {
+    color: rgba(255, 255, 255, 1);
+}
+
+.nav__link::before {
+    content: ''; /*Must always specify content*/
+    height: 2px;
+    width: 100%;
+    background-color: #cdb1b8;
+    position: absolute; /*the lines will not take up any space but we must adjust the positioning*/
+    bottom: -6px;
+    border-radius: 50px;
+    transform: scaleX(0);
+    transition: transform 0.25s linear;
+    pointer-events: none; /*the line will not activate the hover*/
+}
+
+.nav__link:hover::before {
+    transform: scaleX(1);
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    height: 2px;
+    width: 27px;
+    background-color: #fff;
+    margin: 5px 0;
+    opacity: 0.8;
+    transition: all 0.3s ease-in-out;
+}
+
+/* FOR JS */
+
+/* Scrolling function for the header
+.header-scrolled {
+    background-color: rgba(19, 22, 26, 1);
+}*/
+
+.nav--open {
+    left: 0 !important;
+}
+
+.hamburger--open .bar:nth-child(1){
+    transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger--open .bar:nth-child(2){
+    opacity: 0;
+}
+
+.hamburger--open .bar:nth-child(3){
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 650px) {
+    .nav {
+        position: fixed;
+        top: 60px;
+        left: 1000px;
+        background-color: rgba(19, 22, 26, 0.9);
+        width: 100%;
+        padding: 10px 0 25px;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .nav__list {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 23px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
