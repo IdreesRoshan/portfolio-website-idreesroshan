@@ -28,16 +28,11 @@ body {
     background-color: #fff;
     font-family: 'Inter', sans-serif; /*Inter font, back up sand-serif*/
     min-height: 5000px; /*Just to add some scrolling*/
-    padding-top: 70px;
+    padding-top: 60px;
     position: relative;
-    background-image: url("/images/bg.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
 }
 
-/* NORMAL STYLES */
+/* ---------- NAVBAR START ---------- */
 .header {
     background-color: rgba(19, 22, 26, 1);
     position: fixed; /*fixed so that it stays when we scroll, must pad the top of body*/
@@ -46,8 +41,6 @@ body {
     transition: all 0.3s ease-in;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.8);
 }
-
-
 
 .header__content {
     display: flex;  /*using flexbox for placement*/
@@ -124,26 +117,60 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
-/* SECTION */
+/* FOR JS */
 
+/* Scrolling function for the header
+.header-scrolled {
+    background-color: rgba(19, 22, 26, 1);
+}*/
+
+.nav--open {
+    left: 0 !important;
+}
+
+.hamburger--open .bar:nth-child(1){
+    transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger--open .bar:nth-child(2){
+    opacity: 0;
+}
+
+.hamburger--open .bar:nth-child(3){
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ---------- NAVBAR END ---------- */
+
+
+
+/* ---------- PROFILE START ---------- */
 section {
-    padding-top: 4vh;
-    height: 96vh;
-    margin: 0 10rem;
-    box-sizing: border-box;
-    min-height: fit-content;
+   
 }
 
 .section-container {
     display: flex;
 }
 
-/* PROFILE SECTION */
 #profile {
     display: flex;
     justify-content: center;
     gap: 3rem;
     height: 80vh;
+    padding-top: 4vh; /*Viewport height*/
+    height: 96vh;
+    margin: 0;
+    width: auto;
+    box-sizing: border-box;
+    min-height: fit-content;
+    background-color: #333;
+    
+    background-image: url("/images/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 .section__pic-container{
@@ -215,32 +242,43 @@ section {
     transform: scale(1.09);
 }
 
-
-/* FOR JS */
-
-/* Scrolling function for the header
-.header-scrolled {
-    background-color: rgba(19, 22, 26, 1);
-}*/
-
-.nav--open {
-    left: 0 !important;
-}
-
-.hamburger--open .bar:nth-child(1){
-    transform: translateY(7px) rotate(45deg);
-}
-
-.hamburger--open .bar:nth-child(2){
-    opacity: 0;
-}
-
-.hamburger--open .bar:nth-child(3){
-    transform: translateY(-7px) rotate(-45deg);
-}
+/* ---------- PROFILE END ---------- */
 
 /* MEDIA QUERIES */
-@media (max-width: 650px) {
+
+@media (max-width: 1100px) {
+
+    #profile {
+        height: 83vh;
+        margin-bottom: 0;
+        flex-wrap: wrap;
+    }
+
+    #profile,
+    .section-container {
+        display: block;
+    }
+    .arrow {
+        display: none;
+    }
+    section,
+    .section-container {
+        height: fit-content;
+    }
+    section {
+        margin: 0 5%;
+    }
+    .section__pic-container {
+        width: 250px;
+        height: 250px;
+        margin: 0 auto;
+    }
+
+
+}
+
+
+@media (max-width: 680px) {
     .nav {
         position: fixed;
         top: 60px;
@@ -259,5 +297,32 @@ section {
 
     .hamburger {
         display: block;
+    }
+
+    #profile {
+        height: 83vh;
+        margin-bottom: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+    }
+
+    .btn-container {
+        flex-wrap: wrap;
+    }
+
+    .section__pic-container{
+        width: auto;
+        height: 46vw;
+        justify-content: center;
+    }
+
+    .section__text__p2 {
+        font-size: 1.25rem;
+    }
+
+    .title {
+        font-size: 4rem;
     }
 }
