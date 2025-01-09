@@ -7,7 +7,6 @@ hamburgerEl.addEventListener('click', () => {
     hamburgerEl.classList.toggle('hamburger--open');
 });
 
-
 /*Implements the scrolling function for the header
 window.addEventListener('scroll', () => {
     if (window.scrollY > 500) {
