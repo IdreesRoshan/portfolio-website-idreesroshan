@@ -25,11 +25,22 @@ ul {
 
 /* BASE STYLES */
 body {
-    background-color: #fff;
+    background-color: rgba(19, 22, 26, 1);;
     font-family: 'Inter', sans-serif; /*Inter font, back up sand-serif*/
     min-height: 5000px; /*Just to add some scrolling*/
     padding-top: 60px;
     position: relative;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(5%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* ---------- NAVBAR START ---------- */
@@ -40,6 +51,7 @@ body {
     top: 0;
     transition: all 0.3s ease-in;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.8);
+    z-index: 1000;
 }
 
 .header__content {
@@ -157,13 +169,12 @@ section {
     display: flex;
     justify-content: center;
     gap: 3rem;
-    height: 80vh;
     padding-top: 4vh; /*Viewport height*/
-    height: 96vh;
+    height: 100vh;
     margin: 0;
     width: auto;
     box-sizing: border-box;
-    min-height: fit-content;
+    min-height: auto;
     background-color: #333;
     
     background-image: url("/images/bg.jpg");
@@ -217,13 +228,14 @@ section {
     display: flex;
     justify-content: center;
     gap: 1rem;
+    padding-top: 20px;
 }
 
 .btn {
     font-weight: 600;
     transition: all 0.3s ease;
     padding: 0.6rem;
-    width: 8rem;
+    width: 7rem;
     border-radius: 2rem;
 }
 
@@ -244,12 +256,16 @@ section {
 
 /* ---------- PROFILE END ---------- */
 
+#about {
+    
+}
+
 /* MEDIA QUERIES */
 
 @media (max-width: 1100px) {
 
     #profile {
-        height: 83vh;
+        height: 100vh;
         margin-bottom: 0;
         flex-wrap: wrap;
     }
@@ -272,6 +288,8 @@ section {
         width: 250px;
         height: 250px;
         margin: 0 auto;
+        justify-content: center;
+        padding-bottom: 30px;
     }
 
 
@@ -300,12 +318,9 @@ section {
     }
 
     #profile {
-        height: 83vh;
+        height: 100vh;
         margin-bottom: 0;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-        background-position: center;
+        
     }
 
     .btn-container {
@@ -316,6 +331,7 @@ section {
         width: auto;
         height: 46vw;
         justify-content: center;
+        padding-bottom: 30px;
     }
 
     .section__text__p2 {
