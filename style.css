@@ -45,6 +45,28 @@ body {
     transform: translateY(0);
 }
 
+.hidden-timeline-left {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show-timeline-left {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+.hidden-timeline-right {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 1s;
+}
+
+.show-timeline-right {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
 /* ---------- NAVBAR START ---------- */
 .header {
     background-color: rgba(19, 22, 26, 1);
@@ -264,7 +286,7 @@ section {
     justify-content: center;
     gap: 3rem;
     padding: 0 120px;
-    padding-top: 10rem;
+    padding-top: 12rem;
 }
 
 .about__text {
@@ -275,6 +297,7 @@ section {
 
 .about__title {
     font-size: 2.5rem;
+    text-align: left;
 }
 
 .about__description {
@@ -337,8 +360,106 @@ section {
     transition-delay: 700ms;
 }
 
-
 /* ---------- TECH STACK END ---------- */
+
+/* ---------- EXPERIENCE START ---------- */
+
+.experience__title  {
+    display: flex;
+    gap: 3rem;
+    padding: 0 120px;
+    padding-top: 12rem;
+    font-size: 2.5rem;
+    text-align: left;
+    color: #fff;
+}
+
+.experience__section {
+    position: relative;
+    max-width: 1200px;
+    margin: 100px auto;
+}
+
+.container {
+    padding: 10px 50px;
+    position: relative;
+    width: 50%;
+}
+
+.text-box {
+    padding: 20px 30px;
+    background: #fff;
+    position: relative;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.left-container {
+    left: 0;
+}
+
+.right-container {
+    left: 50%;
+}
+
+.experience__section::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: #fff;
+    top: 0;
+    left: 50%;
+    margin-left: -3px;    
+    z-index: -1;
+    animation: moveline 2s linear forwards;
+}
+
+@keyframes moveline {
+    0% {
+        height: 0;
+    }
+    100%{
+        height: 100%;
+    }
+}
+
+.text-box h2 {
+    font-weight: 600;
+}
+
+.text-box small {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.left-container-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 18px solid #fff;
+    right: -15px;
+}
+
+.right-container-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 18px solid #fff;
+    left: -15px;
+}
+
+
+/* ---------- EXPERIENCE END ---------- */
+
 
 
 /* MEDIA QUERIES */
@@ -465,6 +586,49 @@ section {
         text-align: justify;
         font-size: 17px;
         line-height: 1.5;
+    }
+
+    .experience__section {
+        margin: 50px auto;
+    }
+
+    .experience__section::after {
+        left: 31px;
+    }
+
+    .container {
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 25px;
+    }
+
+    .text-box {
+        font-size: 13px;
+    }
+
+    .text-box small {
+        margin-bottom: 10px;
+    }
+
+    .right-container {
+        left: 0;
+    }
+
+    .left-container-arrow {
+        border-right: 18px solid #fff;
+        border-left: 0;
+        left: -15px;
+    }
+
+    .hidden-timeline-left {
+        opacity: 0;
+        transform: translateX(100%);
+        transition: all 1s;
+    }
+    
+    .show-timeline-left {
+        opacity: 1;
+        transform: translateX(0%);
     }
     
 }
