@@ -27,7 +27,7 @@ ul {
 body {
     background-color: rgba(19, 22, 26, 1);;
     font-family: 'Inter', sans-serif; /*Inter font, back up sand-serif*/
-    /*min-height: 5000px; Just to add some scrolling*/
+    min-height: 6000px; /*Just to add some scrolling*/
     padding-top: 60px;
     position: relative;
     overflow-x: hidden;
@@ -352,13 +352,13 @@ section {
 }
 
 .box:nth-child(1) {
-    transition-delay: 200ms;
+    transition-delay: 300ms;
 }
 .box:nth-child(2) {
-    transition-delay: 500ms;
+    transition-delay: 600ms;
 }
 .box:nth-child(3) {
-    transition-delay: 700ms;
+    transition-delay: 900ms;
 }
 
 /* ---------- TECH STACK END ---------- */
@@ -520,6 +520,92 @@ section {
 
 /* ---------- PROJECTS END ---------- */
 
+/* ---------- EDUCATION START ---------- */
+.education__title  {
+    display: flex;
+    gap: 3rem;
+    padding: 0 120px;
+    padding-top: 12rem;
+    padding-bottom: 3rem;
+    font-size: 2.5rem;
+    text-align: left;
+    color: #fff;
+}
+
+#education .container {
+    width: 1000px;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: #333;
+    color: #fff;
+    padding: 30px;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1); 
+    border-radius: 5px;
+}
+
+.tab_box {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 2px solid rgba(299, 299, 299);
+    position: relative;
+}
+
+.tab_box
+.tab_btn {
+    font-size: 18px;
+    font-weight: 600;
+    color: #919191;
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.tab_box .tab_btn.active {
+    color: #fff;
+}
+ 
+.content_box {
+    padding: 20px;
+}
+
+.content_box
+.content {
+    display: none;
+    animation: moving 0.5s ease;
+}
+@keyframes moving {
+    from{transform: translateX(50px);opacity:0;}
+    to{transform: translateX(0px);opacity: 1;}
+}
+
+.content_box 
+.content.active {
+    display: block;
+}
+
+.content_box
+.content h2 {
+    margin-bottom: 20px;
+}
+
+.line {
+    position: absolute;
+    top: 39px;
+    opacity: 0;
+    width: 107px;
+    height: 5px;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+/* ---------- EDUCATION END ---------- */
+
+
 
 
 
@@ -578,6 +664,15 @@ section {
         padding: 0 0px;
         padding-top: 2rem;
         color: #fff;
+    }
+
+    #education .container {
+        width: 600px;
+        background-color: #333;
+        color: #fff;
+        padding: 5px;
+        box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1); 
+        border-radius: 5px;
     }
 
     .box:nth-child(1) {
@@ -692,4 +787,17 @@ section {
         transform: translateX(0%);
     }
     
+    #education .container {
+        width: 350px;
+        background-color: #333;
+        color: #fff;
+        padding: 5px;
+        box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1); 
+        border-radius: 5px;
+    }
+
+    .line {
+        display: none;
+    }
+
 }
