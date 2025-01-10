@@ -23,16 +23,16 @@ ul {
     list-style: none;
 }
 
+
 /* BASE STYLES */
 body {
     background-color: rgba(19, 22, 26, 1);;
     font-family: 'Inter', sans-serif; /*Inter font, back up sand-serif*/
-    min-height: 6000px; /*Just to add some scrolling*/
+    /*min-height: 6000px; Just to add some scrolling*/
     padding-top: 60px;
     position: relative;
     overflow-x: hidden;
 }
-
 
 /* OBSERVER */
 .hidden {
@@ -533,7 +533,7 @@ section {
 }
 
 #education .container {
-    width: 1000px;
+    width: 1200px;
     justify-content: center;
     margin: 0 auto;
     background-color: #333;
@@ -605,6 +605,77 @@ section {
 
 /* ---------- EDUCATION END ---------- */
 
+
+/* ---------- CONTACT START ---------- */
+.contact_container {
+    gap: 3rem;
+    padding: 0 120px;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    text-align: left;
+    color: #fff;
+}
+
+
+#contact h3 {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+#contact ul {
+    margin: 20px 0;
+}
+
+/* ---------- CONTACT END ---------- */
+
+/* ---------- FOOTER START ---------- */
+
+.footer_container {
+    width: 100%;
+    padding: 30px 20px 10px;
+}
+
+.social_icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+    color: #fff;
+
+}
+
+.footer_nav {
+    margin: 30px 0;
+}
+
+.footer_nav__list {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer_nav__items {
+
+}
+
+.footer_nav__link {
+    color: rgba(255, 255, 255, 0.7);    /*R, G, B, Opacity*/
+    transition: all 0.3s;   /*All properties that change should happen in 0.3s*/
+    position: relative;
+}
+
+.footer_nav__link:hover,
+.footer_nav__link:focus {
+    color: rgba(255, 255, 255, 1);
+}
+
+.footer_bottom {
+    display: flex;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+}
+/* ---------- FOOTER END ---------- */
 
 
 
