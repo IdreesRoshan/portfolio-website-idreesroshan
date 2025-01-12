@@ -34,6 +34,14 @@ body {
     overflow-x: hidden;
 }
 
+#para {
+    padding-bottom: 1rem;
+}
+
+#bold {
+    font-weight: 500;
+}
+
 /* OBSERVER */
 .hidden {
     opacity: 0;
@@ -316,6 +324,7 @@ section {
     padding: 0 120px;
     padding-top: 2rem;
     color: #fff;
+    position: relative;
 }
 
 .tech__stack-container {
@@ -332,7 +341,7 @@ section {
 
 .tech__stack-list div {
     background: #333;
-    padding: 40px;
+    padding: 45px;
     border-radius: 0.35rem;
 }
 
@@ -601,8 +610,6 @@ section {
     transition: all 0.3s ease-in-out;
 }
 
-
-
 /* ---------- EDUCATION END ---------- */
 
 
@@ -804,7 +811,7 @@ section {
         font-size: 4rem;
     }
 
-    .about__title {
+    .about__title{
         font-size: 2rem;
     }
     
