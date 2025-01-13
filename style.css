@@ -955,7 +955,6 @@ section {
     .line {
         display: none;
     }
-
 }
 
 @media (max-width: 500px) {
