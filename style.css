@@ -396,6 +396,19 @@ section {
     width: 50%;
 }
 
+.container img {
+    position: absolute;
+    width: 40px;
+    border-radius: 50%;
+    right: -20px;
+    top: 32px;
+    z-index: 1;
+}
+
+.right-container img {
+    left: -20px;
+}
+
 .text-box {
     padding: 20px 30px;
     background: #fff;
@@ -742,6 +755,50 @@ section {
         padding-top: 10rem;
     }
 
+    .experience__title  {
+        display: flex;
+        padding: 0 0px;
+        padding-top: 12rem;
+        font-size: 2.5rem;
+        color: #fff;
+    }
+
+    .projects__title  {
+        display: flex;
+        gap: 3rem;
+        padding: 0 0px;
+        padding-top: 12rem;
+        font-size: 2.5rem;
+        text-align: left;
+        color: #fff;
+    }
+
+    .education__title  {
+        display: flex;
+        gap: 3rem;
+        padding: 0 0px;
+        padding-top: 12rem;
+        padding-bottom: 3rem;
+        font-size: 2.5rem;
+        text-align: left;
+        color: #fff;
+    }
+
+    .contact_container {
+        gap: 3rem;
+        padding: 0 0px;
+        padding-top: 2rem;
+        padding-bottom: 3rem;
+        text-align: left;
+        color: #fff;
+    }
+
+    .container {
+        padding: 10px 50px;
+        position: relative;
+        width: 50%;
+    }
+
     .tech__stack-list div h2{
         padding-bottom: 1rem;
         font-size: 35px;
@@ -780,7 +837,7 @@ section {
 }
 
 
-@media (max-width: 680px) {
+@media (max-width: 800px) {
     .nav {
         position: fixed;
         top: 60px;
@@ -861,6 +918,11 @@ section {
 
     .right-container {
         left: 0;
+    }
+
+    .left-container img,
+    .right-container img {
+        left: 10px;
     }
 
     .left-container-arrow {
