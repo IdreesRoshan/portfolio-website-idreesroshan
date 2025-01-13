@@ -941,6 +941,16 @@ section {
         opacity: 1;
         transform: translateX(0%);
     }
+
+    .card {
+        width: 300px;
+        background-color: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        margin: 20px;
+        transition: all 0.3s ease;
+    }
     
     #education .container {
         width: 350px;
