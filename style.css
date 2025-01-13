@@ -638,6 +638,10 @@ section {
     transition: all 0.3s ease-in-out;
 }
 
+.company {
+    transition-delay: 1000ms;
+}
+
 /* ---------- EDUCATION END ---------- */
 
 
