@@ -689,10 +689,6 @@ section {
     gap: 1rem;
 }
 
-.footer_nav__items {
-
-}
-
 .footer_nav__link {
     color: rgba(255, 255, 255, 0.7);    /*R, G, B, Opacity*/
     transition: all 0.3s;   /*All properties that change should happen in 0.3s*/
@@ -941,18 +937,34 @@ section {
         opacity: 1;
         transform: translateX(0%);
     }
+
+    .card {
+        width: 300px;
+        background-color: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        margin: 20px;
+        transition: all 0.3s ease;
+    }
     
     #education .container {
-        width: 350px;
-        background-color: #333;
-        color: #fff;
-        padding: 5px;
-        box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1); 
-        border-radius: 5px;
+        width: 450px;
     }
 
     .line {
         display: none;
     }
 
+}
+
+@media (max-width: 500px) {
+
+    #education .container {
+        width: 340px;
+    }
+
+    .footer_nav__link {
+        font-size: 12px;
+    }
 }
