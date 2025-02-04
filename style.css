@@ -569,6 +569,46 @@ section {
     color: #fff;
 }
 
+.certificate-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.certificate {
+    width: 500px;
+    height: 500px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    transition: all 0.3s ease;
+}
+
+.certificate-image {
+    display: flex;
+    height: 400px;
+    width: auto;
+    justify-content: center;
+}
+
+.certificate:hover {
+    transform: translateY(-10px)
+}
+
+.certificate-content {
+    padding: 16px;
+}
+
+.certificate-content h3 {
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
 #education .container {
     width: 1200px;
     justify-content: center;
@@ -954,6 +994,24 @@ section {
     
     #education .container {
         width: 450px;
+    }
+
+    .certificate {
+        width: 300px;
+        height: 330px;
+        background-color: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        margin: 20px;
+        transition: all 0.3s ease;
+    }
+    
+    .certificate-image {
+        display: flex;
+        height: 200px;
+        width: auto;
+        justify-content: center;
     }
 
     .line {
